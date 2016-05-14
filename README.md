@@ -1,6 +1,6 @@
 # Final Project - Weather App using OpenWeatherMap api
-
-
+     
+     
 # Project 4 Starter Code
 
 Here’s some starter code for you to use with your final projects. 

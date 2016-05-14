@@ -27,20 +27,29 @@
           </select>
       </div>
       <div class="form-group">
-          <input class = "form-control" id="location" placeholder = "Choose zip or city"/>
+          <input class = "form-control" id="location"/>
 
       </div>
 
       <button type="submit" class="btn btn-default">Save</button>
 
     </form>
-    <div>
+    <div class = 'locs'>
       <ul id = 'savedLocs'>
         <li>
           <a href = '#' id="defaultLoc">Washington, D.C.  </a><button class="deleteButton">Delete</button>
         </li>
       </ul>
-
+    </div>
+    <div>
+      <ul id = "weather">
+        <li id = "temp">
+        </li>
+        <li id = "main">
+        </li>
+        <li id = "wind">
+        </li>
+      </ul>
     </div>
   </body>
 </html>

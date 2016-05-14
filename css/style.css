@@ -26,3 +26,9 @@ form{
   position: absolute;
   left: 75%;
 }
+
+#weather{
+  margin: 3em 36em;
+  list-style: none;
+  font-size: large;
+}
