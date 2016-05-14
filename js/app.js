@@ -17,69 +17,73 @@ var params = {
     api_key:'2b29981d2c60843b266ebfeb3f464e47'
     
 }
-var WeatherLocation = new ParseObjectType("WeatherLocation")
-// var $savedLocs = $('#saved_locs');
-$(document).ready(function(){
-    var $form = $('form');
-    getSavedLocations();
-  $form.on('submit', function(e) {
-      e.preventDefault();
-      var $type = $('#loc_type').val();
-      var $value = $('#location').val();
+var $form = $('form');
 
-      saveLocation($type, $value);
+var WeatherLocation = new ParseObjectType("WeatherLocation");
+// var $savedLocs = $('#saved');
+$(function(){
 
-  })
+    WeatherLocation.getAll(function(err, results) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            results.forEach(renderLocation);
 
-    function getSavedLocations(){
-        WeatherLocation.getAll(function(err, result){
-            if(err){
-                console.log(err);
-            }
-            else{
-                console.log(result);
-                for(var i=0; i<result.length; i++){
-                    displaySavedLocation(result[i]);
+        }
+        $('ul.saved li.location a').click(function (e) {
+            e.preventDefault();
+            console.log('rqwerqerqe');
+            // getLocationWeather($(this))
+        });
+
+        $form.on('submit', function (e) {
+            e.preventDefault();
+            var $type = $('#loc_type').val();
+            var $value = $('#location').val();
+            var locationObj = {type: $type, value: $value};
+            WeatherLocation.create(locationObj, function (err, result) {
+                if (err) {
+                    console.error(err);
+                }
+                else {
+                    locationObj.objectId = result.objectId;
+                    console.log(locationObj);
+                    renderLocation(locationObj);
+
                 }
 
-            }
-        })
-    }
+            })
 
 
-    function saveLocation($type, $value){
-        var weatherObj = {type: $type, value: $value}
-        WeatherLocation.create({type: $type, value: $value}, function(err, result){
-            if(err){
-                console.error(err);
-            }
-            else{
-                weatherObj.objectId = result.objectId;
-                console.log(weatherObj);
-                displaySavedLocation(weatherObj)
+        });
 
-                //$savedLocs.append('<li><a href = "#" id='+value+')
+        function getLocationWeather(locationObj) {
 
-            }
-        })
+            //onclick use weather api to display popup of current weather for saved location clicked
+        }
 
-    }
-    function displaySavedLocation(weatherObj){
-        var html = '<li><a href="#">'+weatherObj.value+'</a></li>';
-        $('ul#saved_locs').append(html);
-    }
-    function getLocationWeather($location){
-        //onclick use weather api to display popup of current weather for saved location clicked
-    }
-    function removeLocation () {
-        //remove saved location
-    }
+        function removeLocation() {
+            //remove saved location
+        }
 
-    function updateLocation () {
+        function updateLocation() {
 
-    }
+        }
 
-})
+        function renderLocation(locData) {
+            var source = $("#loc-template").html();
+            var template = Handlebars.compile(source);
+            var html = template(locData);
+            $('.saved').append(html);
+
+        }
+
+
+    });
+
+});
+
 
 
 
