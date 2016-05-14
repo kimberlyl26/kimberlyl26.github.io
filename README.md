@@ -1,9 +1,5 @@
-# Final Project - Wardrobe Planner using OpenWeatherMap api
+# Final Project - Weather App using OpenWeatherMap api
 
-Based on location from user input (using city name and ISO 3306 country code but only us), 
- this application will save some time for those who hate planning outfits and how to stay comfortable on their
-  commutes to work. They specify the time of day they spend outside walking/biking to work and it spits out what to wear
- (how many layers, if a coat is neccessary, etc.)
 
 # Project 4 Starter Code
 
