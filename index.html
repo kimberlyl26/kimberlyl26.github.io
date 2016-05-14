@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Weather Prepper</title>
+    <title>My Weather Locations</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
 	<link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,7 @@
 
   </head>
   <body>
-    <h3 class = "title">Weather Prepper</h3>
+    <h3 class = "title">Weather Location</h3>
 
     <form class = "form-inline">
       <!--<label for = "country">Country</label>
@@ -31,9 +31,16 @@
 
       </div>
 
-      <button type="submit" class="btn btn-default">Submit</button>
-
+      <button type="submit" class="btn btn-default">Save</button>
 
     </form>
+    <div>
+      <ul id = 'savedLocs'>
+        <li>
+          <a href = '#' id="defaultLoc">Washington, D.C.  </a><button class="deleteButton">Delete</button>
+        </li>
+      </ul>
+
+    </div>
   </body>
 </html>

@@ -22,3 +22,7 @@ a {
 form{
   padding: 10px 25px;
 }
+#savedLocs{
+  position: absolute;
+  left: 75%;
+}
