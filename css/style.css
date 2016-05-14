@@ -22,10 +22,14 @@ a {
 form{
   padding: 10px 25px;
 }
-#savedLocs{
+.locs{
   position: absolute;
   left: 75%;
 }
+#saved_locs{
+  list-style: none;
+}
+
 
 #weather{
   margin: 3em 36em;

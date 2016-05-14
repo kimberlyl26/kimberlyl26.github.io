@@ -1,6 +1,6 @@
 
 var api_url = 'http://api.openweathermap.org/data/2.5/';
-var $savedLocs = $('#savedLocs')
+
 var params = {
     prefixes: {
         weather: 'weather?',
@@ -18,21 +18,34 @@ var params = {
     
 }
 var WeatherLocation = new ParseObjectType("WeatherLocation")
-
+// var $savedLocs = $('#saved_locs');
 $(document).ready(function(){
-  var $form = $('form')
-
-  //var url = api_url + params. + ',us&mode=json&units=imperial&appid=' +api_key;
-
+    var $form = $('form');
+    getSavedLocations();
   $form.on('submit', function(e) {
       e.preventDefault();
       var $type = $('#loc_type').val();
       var $value = $('#location').val();
 
       saveLocation($type, $value);
+
   })
 
-})
+    function getSavedLocations(){
+        WeatherLocation.getAll(function(err, result){
+            if(err){
+                console.log(err);
+            }
+            else{
+                console.log(result);
+                for(var i=0; i<result.length; i++){
+                    displaySavedLocation(result[i]);
+                }
+
+            }
+        })
+    }
+
 
     function saveLocation($type, $value){
         var weatherObj = {type: $type, value: $value}
@@ -43,12 +56,17 @@ $(document).ready(function(){
             else{
                 weatherObj.objectId = result.objectId;
                 console.log(weatherObj);
+                displaySavedLocation(weatherObj)
 
                 //$savedLocs.append('<li><a href = "#" id='+value+')
 
             }
         })
 
+    }
+    function displaySavedLocation(weatherObj){
+        var html = '<li><a href="#">'+weatherObj.value+'</a></li>';
+        $('ul#saved_locs').append(html);
     }
     function getLocationWeather($location){
         //onclick use weather api to display popup of current weather for saved location clicked
@@ -61,7 +79,7 @@ $(document).ready(function(){
 
     }
 
-
+})
 
 
 
