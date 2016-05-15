@@ -36,7 +36,6 @@ $(function() {
                 console.log(locationObj);
 
                 var update = [locationObj];
-
                 getAllLocations(update);
             }
         })
