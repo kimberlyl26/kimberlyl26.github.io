@@ -11,9 +11,9 @@ var params = {
 
 //Using US for the country, json for the mode, fahrenheit(imperial) for the units for now
 
-var WeatherLocation = new ParseObjectType("WeatherLocation");
-$(function() {
 
+$(function() {
+    var WeatherLocation = new ParseObjectType("WeatherLocation");
     var $form = $('form');
     $form.on('submit', function (e) {
         e.preventDefault();
@@ -43,11 +43,8 @@ $(function() {
 
     });
     getAllLocations();
-});
 
-    //On add location(submit) a location of type zip or city is saved.
-
-function getAllLocations(update) {
+    function getAllLocations(update) {
 
     WeatherLocation.getAll(function (err, results) {
         if (err) {
@@ -145,6 +142,11 @@ function removeLocation($location) {
             }
         });
     }
+});
+
+    //On add location(submit) a location of type zip or city is saved.
+
+
 
 
 
