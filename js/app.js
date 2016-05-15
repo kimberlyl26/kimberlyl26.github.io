@@ -26,7 +26,7 @@ $(function() {
         console.log($stripped);
         //Location object
         var locationObj = {type: $type, value: $stripped};
-        WeatherLocation.create(locationObj, function (err, result) {
+        WeatherLocation.create({type: $type, value: $stripped}, function (err, result) {
             if (err) {
                 console.error(err);
             }
