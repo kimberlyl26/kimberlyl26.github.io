@@ -1,0 +1,20 @@
+{
+  "name": "js1-final-project",
+  "version": "1.0.0",
+  "description": "Simple Weather App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimberlyl26/js1-final-project.git"
+  },
+  "author": "Kimberly Lanman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimberlyl26/js1-final-project/issues"
+  },
+  "homepage": "https://github.com/kimberlyl26/js1-final-project#readme"
+}
