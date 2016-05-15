@@ -8,8 +8,9 @@ body {
   text-align: center;
 }
 
-.hidden{
+div.hidden, div.hidden>ul.hidden{
   display: None;
+
 }
 
 a {
@@ -26,13 +27,11 @@ form{
   position: absolute;
   left: 75%;
 }
-.saved{
-  list-style: none;
-}
 
-
-#weather{
+div#current {
   margin: 3em 36em;
   list-style: none;
-  font-size: large;
+}
+.saved, #weather{
+  list-style: none;
 }

@@ -3,6 +3,7 @@
   <head>
     <title>My Weather Locations</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
 	<link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -14,20 +15,22 @@
     <script id="loc-template" type="text/x-handlebars-template">
 		<li class="location" data-id="{{ objectId }}" data-type={{type}} data-value = {{value}}>
 			<a href="#" id = "{{ objectId }}">{{ value }}</a>
+            <i class="fa fa-trash delete"></i>
 		</li>
 	</script>
 
   </head>
   <body>
-    <h3 class = "title">Weather Location</h3>
+
+
+    <h3 class = "title">My Simple Weather App</h3>
 
     <form class = "form-inline">
       <!--<label for = "country">Country</label>
       <input id = "country" placeholder = "e.g. US"/>-->
-
       <div class = "form-group">
 
-          <select id = "loc_type">
+          <select id = "loctype">
             <option value = "zip"> Zip code</option>
             <option value = "city">City name</option>
           </select>
@@ -36,23 +39,17 @@
           <input class = "form-control" id="location"/>
       </div>
 
-      <button type="submit" class="btn btn-default">Save</button>
+      <button type="submit" class="btn btn-default">Add Location</button>
 
     </form>
     <div class = 'locs'>
-      <h4>Saved Locations</h4>
+      <h4>My Locations</h4>
       <ul class = 'saved'>
 
       </ul>
     </div>
-    <div class = 'hidden weather'>
-      <ul id = "weather">
-        <li id = "temp">
-        </li>
-        <li id = "main">
-        </li>
-        <li id = "wind">
-        </li>
+    <div id = 'current' class = 'hidden'>
+      <ul id = 'weather' class = 'hidden' style="list-style: none;">
       </ul>
     </div>
   </body>

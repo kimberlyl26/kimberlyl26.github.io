@@ -5,7 +5,7 @@
   <title>Document</title>
 </head>
 <body>
-	<h3>Configure your APP_ID, APP_KEY and APP_HOST right here!</h1>
+	<h3>Configure your APP_ID, APP_KEY and APP_HOST right here!</h3>
   <form>
     <input type="text" name="APP_ID" placeholder="APP_ID">
     <input type="text" name="API_KEY" placeholder="API_KEY">
@@ -21,13 +21,13 @@
 
     form.addEventListener("submit", function(e){
       e.preventDefault();
-      localStorage.setItem("APP_ID", appId.value)
-      localStorage.setItem("API_KEY", apiKey.value)
-      localStorage.setItem("API_HOST", apiHost.value)
-    })
-    var APP_ID = localStorage.getItem("APP_ID")
-    var API_KEY = localStorage.getItem("API_KEY")
-    var API_HOST = localStorage.getItem("API_HOST")
+      localStorage.setItem("APP_ID", appId.value);
+      localStorage.setItem("API_KEY", apiKey.value);
+      localStorage.setItem("API_HOST", apiHost.value;
+    });
+    var APP_ID = localStorage.getItem("APP_ID");
+    var API_KEY = localStorage.getItem("API_KEY");
+    var API_HOST = localStorage.getItem("API_HOST");
     if(APP_ID){
       appId.value = APP_ID
     }
