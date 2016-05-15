@@ -42,7 +42,7 @@ $(function() {
 
 
     });
-    getAllLocations();
+    getAllLocations([]);
 });
 
     //On add location(submit) a location of type zip or city is saved.
