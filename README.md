@@ -1,12 +1,7 @@
 # Final Project - Weather App using OpenWeatherMap api
 Run this locally because it doesn't work the same way
 * Get a free api key from http://openweathermap.org/price 
-* Find 
-     var params = {
-        api_url:'http://api.openweathermap.org/data/2.5/weather?',
-        api_key: '2b29981d2c60843b266ebfeb3f464e47'
-     }
- and set api_key to yours
+* Find  `var params` object in app.js and set api_key to yours
 * Run locally
      * Type in zip or city and click submit and you'll save your location to a list on the right (Create)
      * Click on each link to ping opwm api and retrieve some weather stats and display them on the page
