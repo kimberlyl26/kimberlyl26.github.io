@@ -6,7 +6,10 @@ Run this locally because it doesn't work the same way
      * Type in zip or city and click submit and you'll save your location to a list on the right (Create)
      * Click on each link to ping opwm api and retrieve some weather stats and display them on the page
      * Click on the trash icon next to any location link to delete that location
- TODO: figure out what the deal is with ParseObjectType and heroku and how to deploy. Then do it      
+    
+TODO: 
+* figure out what the deal is with ParseObjectType and heroku and how to deploy. Then do it. 
+* More/better documentation      
  
 # Project 4 Starter Code
 
