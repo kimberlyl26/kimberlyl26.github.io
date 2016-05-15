@@ -13,7 +13,7 @@ var params = {
 
 var WeatherLocation = new ParseObjectType("WeatherLocation");
 $(function() {
-   var update = []
+
     var $form = $('form');
     $form.on('submit', function (e) {
         e.preventDefault();
@@ -35,14 +35,14 @@ $(function() {
                 locationObj.objectId = result.objectId;
                 console.log(locationObj);
 
-                update = [locationObj];
+                var update = [locationObj];
                 getAllLocations(update);
             }
         })
 
 
     });
-    getAllLocations(update);
+    getAllLocations();
 });
 
     //On add location(submit) a location of type zip or city is saved.
