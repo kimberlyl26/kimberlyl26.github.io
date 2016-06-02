@@ -44,6 +44,9 @@ $(function() {
     });
     getAllLocations();
 
+
+    //On add location(submit) a location of type zip or city is saved.
+
     function getAllLocations(update) {
 
     WeatherLocation.getAll(function (err, results) {
@@ -144,7 +147,7 @@ function removeLocation($location) {
     }
 });
 
-    //On add location(submit) a location of type zip or city is saved.
+
 
 
 
