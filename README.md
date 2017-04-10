@@ -5,6 +5,7 @@ Go to http://kimberlyl26.github.io/config.html first and put in your access keys
  * Click on each link to ping opwm api and retrieve some weather stats and display them on the page
  * Click on the trash icon next to any location link to delete that location
  * You can save as many locations as you want 
+
 TODO: 
 * Pictures/more weather stats and functionality
 * More/better documentation      
